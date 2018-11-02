@@ -1,0 +1,1 @@
+CREATE TABLE diaries(id SERIAL PRIMARY KEY, body VARCHAR(200), title VARCHAR(70));
