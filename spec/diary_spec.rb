@@ -15,4 +15,11 @@ describe Diary do
       expect(diaries).to include("Third diary")
     end
   end
+  describe '.create' do
+    it 'adds a new diaries' do
+      Diary.create(body: 'Rome is the best city to visit in Europe')
+
+      expect(Diary.all).to include 'Rome is the best city to visit in Europe'
+    end
+  end
 end

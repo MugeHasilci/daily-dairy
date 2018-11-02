@@ -12,5 +12,14 @@ class DailyDairy < Sinatra::Base
     erb :index
   end
 
+  get '/new' do
+    erb :new
+  end
+
+  post '/diaries' do
+    Diary.create(body: params['body'])
+    redirect '/diaries'
+  end
+
   run! if app_file == $0
 end
